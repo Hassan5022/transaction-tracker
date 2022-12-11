@@ -1,6 +1,8 @@
+// hooks
 import { useState, useEffect } from "react";
-import { projectAuth } from "../firebase/config"
 import { useAuthContext } from "./useAuthContext";
+// config file
+import { projectAuth } from "../firebase/config"
 
 export const useSignup = () => {
     

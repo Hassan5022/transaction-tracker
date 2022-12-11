@@ -1,17 +1,19 @@
+// hooks
 import { useEffect, useState } from "react";
-import { projectAuth } from "../firebase/config";
 import { useAuthContext } from "./useAuthContext";
+// config file
+import { projectAuth } from "../firebase/config";
 
 export const useLogin = () => {
 	const [isCancelled, setIsCancelled] = useState(false);
 	const [error, setError] = useState(null);
 	const [isPending, setIsPending] = useState(false);
-    const { dispatch } = useAuthContext();
+	const { dispatch } = useAuthContext();
     
 	const login = async (email, password) => {
         setIsPending(true);
 
-		// signout
+		// signin
 		try {
 			const res = await projectAuth.signInWithEmailAndPassword(email, password);
             
