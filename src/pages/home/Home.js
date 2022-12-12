@@ -14,7 +14,6 @@ export default function Home() {
 		["uid", "==", user.uid],
 		["createdAt", "desc"]
 	);
-
 	return (
 		<div className="container">
 			<div className="content">
