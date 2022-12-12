@@ -13,7 +13,7 @@ export default function Navbar() {
 	return (
 		<nav className="navbar">
 			<ul>
-				<li className="title">My Money</li>
+				<li className="title">Wallet</li>
 				{!user && (
 					<>
 						<li>
